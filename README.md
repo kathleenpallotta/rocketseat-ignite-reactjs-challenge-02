@@ -1,4 +1,4 @@
-# Desafio: Coffee Delivery
+# Desafio: Coffee Delivery [WIP]
 
 Desenvolvimento de uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
 
