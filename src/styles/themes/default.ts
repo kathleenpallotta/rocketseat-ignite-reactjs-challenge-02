@@ -1,7 +1,6 @@
 export const defaultTheme = {
   colors: {
     // base
-
     'base-title': '#272221',
     'base-subtitle': '#403937',
     'base-text': '#574F4D',
