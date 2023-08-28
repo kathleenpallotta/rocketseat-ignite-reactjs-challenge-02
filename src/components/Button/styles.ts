@@ -1,7 +1,7 @@
 import styled, { RuleSet } from 'styled-components'
 
 // helpers
-import { color, fontButton, toRem } from '../../helpers/styles'
+import { color, font, toRem } from '../../helpers/styles'
 
 // types
 import {
@@ -60,7 +60,7 @@ export const Button = styled.button<ButtonComponentProps>`
     color(buttonColors[type].background)};
   color: ${({ type }): RuleSet<object> => color(buttonColors[type].label)};
   text-transform: uppercase;
-  font: ${fontButton('g')};
+  font: ${font('button', 'g')};
 
   svg {
     width: ${toRem(22)};
