@@ -1,7 +1,8 @@
 export interface ProductProps {
   title: string
   description: string
-  label: string
+  labels: string[]
   value: number
   image: string
+  id: number
 }

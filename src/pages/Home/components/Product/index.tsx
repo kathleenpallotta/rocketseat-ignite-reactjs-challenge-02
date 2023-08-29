@@ -18,13 +18,23 @@ import {
 // types
 import { ProductProps as Props } from './types'
 
-export function Product({ description, label, title, value, image }: Props) {
+export function Product({
+  description,
+  labels,
+  title,
+  value,
+  image,
+  id,
+}: Props) {
   const [count, setCount] = useState(1)
 
   return (
     <Container>
       <img src={image} alt={title} />
-      <Label>{label}</Label>
+      {labels.map((label, key) => (
+        <Label key={`product_${id}_label_${key}`}>{label}</Label>
+      ))}
+
       <Title>{title}</Title>
       <Description>{description}</Description>
       <Footer>
