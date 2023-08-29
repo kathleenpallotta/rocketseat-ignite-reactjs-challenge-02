@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { ReactElement } from 'react'
 
 export type ButtonType = 'primary' | 'secondary' | 'addToCart'
@@ -6,6 +7,7 @@ export interface ButtonProps {
   type: ButtonType
   label?: string
   icon?: ReactElement
+  action: Function
 }
 
 export interface ButtonComponentProps {

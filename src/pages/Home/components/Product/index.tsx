@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 // components
 import { Button } from '@/components/Button'
@@ -17,6 +17,7 @@ import {
 
 // types
 import { ProductProps as Props } from './types'
+import { CartContext } from '@/contexts/CartContext'
 
 export function Product({
   description,
@@ -26,7 +27,8 @@ export function Product({
   image,
   id,
 }: Props) {
-  const [count, setCount] = useState(1)
+  const [quantity, setQuantity] = useState(1)
+  const { setProducts } = useContext(CartContext)
 
   return (
     <Container>
@@ -45,8 +47,36 @@ export function Product({
           </Value>
         </Price>
         <Cart>
-          <InputNumber count={count} setCount={setCount} />
-          <Button type="addToCart" />
+          <InputNumber count={quantity} setCount={setQuantity} />
+          <Button
+            action={() => {
+              setProducts((previousState) => {
+                const updatedCart = previousState.map((product) => {
+                  if (product.id === id) {
+                    return {
+                      ...product,
+                      quantity,
+                    }
+                  }
+
+                  return product
+                })
+
+                if (!updatedCart.some((product) => product.id === id)) {
+                  updatedCart.push({
+                    id,
+                    value,
+                    title,
+                    quantity,
+                    image,
+                  })
+                }
+
+                return updatedCart
+              })
+            }}
+            type="addToCart"
+          />
         </Cart>
       </Footer>
     </Container>

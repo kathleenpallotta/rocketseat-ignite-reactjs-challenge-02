@@ -28,7 +28,7 @@ export const Counter = styled.span`
   border-radius: 100%;
   background-color: ${color('yellow-dark')};
   color: ${color('white')};
-  font: ${font('text-s')};
   top: ${toRem(-8)};
   right: ${toRem(-8)};
+  ${font('text-s')}
 `
