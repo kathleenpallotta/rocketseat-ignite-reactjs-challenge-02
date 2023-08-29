@@ -11,8 +11,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   padding: ${toRem(20)};
+  position: relative;
+  margin: 60px;
+
+  img {
+    position: absolute;
+    width: ${toRem(120)};
+    top: ${toRem(-30)};
+  }
 `
 
 export const Label = styled.span`
@@ -45,6 +53,7 @@ export const Footer = styled.footer`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: ${toRem(25)};
 `
 
 export const Price = styled.div`

@@ -18,18 +18,21 @@ import {
 // types
 import { ProductProps as Props } from './types'
 
-export function Product({ description, label, title, value }: Props) {
+export function Product({ description, label, title, value, image }: Props) {
   const [count, setCount] = useState(1)
 
   return (
     <Container>
+      <img src={image} alt={title} />
       <Label>{label}</Label>
       <Title>{title}</Title>
       <Description>{description}</Description>
       <Footer>
         <Price>
           <Currency>R$</Currency>
-          <Value>{value}</Value>
+          <Value>
+            {value.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
+          </Value>
         </Price>
         <Cart>
           <InputNumber count={count} setCount={setCount} />
