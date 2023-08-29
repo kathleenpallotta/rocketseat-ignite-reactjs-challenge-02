@@ -1,5 +1,5 @@
 // assets
-import { ReactComponent as CartIcon } from '../../assets/icons/shopping-cart-fill.svg'
+import { ReactComponent as CartIcon } from '@/assets/icons/shopping-cart-fill.svg'
 
 // styles
 import { Container, Counter } from './styles'

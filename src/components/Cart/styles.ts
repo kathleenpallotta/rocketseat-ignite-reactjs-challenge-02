@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // helpers
-import { color, font, toRem } from '../../helpers/styles'
+import { color, font, toRem } from '@/helpers/styles'
 
 export const Container = styled.a`
   width: ${toRem(38)};
@@ -28,7 +28,7 @@ export const Counter = styled.span`
   border-radius: 100%;
   background-color: ${color('yellow-dark')};
   color: ${color('white')};
-  font: ${font('text', 's')};
+  font: ${font('text-s')};
   top: ${toRem(-8)};
   right: ${toRem(-8)};
 `

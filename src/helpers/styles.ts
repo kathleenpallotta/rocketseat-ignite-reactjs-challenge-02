@@ -1,9 +1,9 @@
 import { css } from 'styled-components'
-import { rootFontSize } from '../styles/global'
+import { rootFontSize } from '@/styles/global'
 
-export const font = (sufix: string, size: string) => {
+export const font = (token: string) => {
   return css`
-    ${(props) => props.theme.typography[`${sufix}-${size}`]};
+    font: ${(props) => props.theme.typography[`${token}`]};
   `
 }
 

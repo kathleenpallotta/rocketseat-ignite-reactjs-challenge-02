@@ -25,7 +25,7 @@ const buttonColors: ButtonComponentColors = {
     icon: 'purple',
     iconHover: 'purple-dark',
   },
-  icon: {
+  addToCart: {
     label: 'base-card',
     background: 'purple-dark',
     backgroundHover: 'purple',
@@ -40,7 +40,7 @@ const buttonSizing: ButtonSizing = {
   secondary: {
     padding: toRem(8),
   },
-  icon: {
+  addToCart: {
     padding: toRem(8),
   },
 }
@@ -60,7 +60,7 @@ export const Button = styled.button<ButtonComponentProps>`
     color(buttonColors[type].background)};
   color: ${({ type }): RuleSet<object> => color(buttonColors[type].label)};
   text-transform: uppercase;
-  font: ${font('button', 'g')};
+  ${font('button-g')}
 
   svg {
     width: ${toRem(22)};

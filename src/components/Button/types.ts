@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export type ButtonType = 'primary' | 'secondary' | 'icon'
+export type ButtonType = 'primary' | 'secondary' | 'addToCart'
 
 export interface ButtonProps {
   type: ButtonType
