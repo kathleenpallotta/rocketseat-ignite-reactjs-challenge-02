@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { navbarHeight } from '@/styles/global'
 
 // helpers
-import { toRem } from '@/helpers/styles'
+import { color, toRem } from '@/helpers/styles'
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +13,9 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  padding: ${toRem(32)} 0;
+  padding: ${toRem(32)} ${toRem(24)};
+  background: ${color('base-background')};
+  z-index: 1;
 `
 
 export const Content = styled.nav`

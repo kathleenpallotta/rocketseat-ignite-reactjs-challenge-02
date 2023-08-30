@@ -14,7 +14,6 @@ export const Container = styled.div`
   justify-content: flex-end;
   padding: ${toRem(20)};
   position: relative;
-  margin: 60px;
 
   img {
     position: absolute;

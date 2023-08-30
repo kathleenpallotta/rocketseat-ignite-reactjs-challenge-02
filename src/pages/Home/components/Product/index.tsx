@@ -33,8 +33,8 @@ export function Product({
   return (
     <Container>
       <img src={image} alt={title} />
-      {labels.map((label, key) => (
-        <Label key={`product_${id}_label_${key}`}>{label}</Label>
+      {labels.map((label, idx) => (
+        <Label key={`product_${id}_label_${idx}`}>{label}</Label>
       ))}
 
       <Title>{title}</Title>
