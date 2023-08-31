@@ -19,7 +19,11 @@ Apesar de serem poucas funcionalidades, foi preciso relembrar conceitos como:
 - Propriedades
 - Componentização
 
-## Para rodar esse projeto
+## Para rodar o projeto
 
 - Copiar o arquivo `.env.example` preenchendo a variável `REACT_APP_IP_GEO_LOCATION_API_KEY` com uma chave gerada em [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
 - Usar o comando `npm run dev`
+
+## Links úteis
+- [Página do desafio](https://efficient-sloth-d85.notion.site/Desafio-02-Coffee-Delivery-30e42a21fdb44b09a85244fc2c3dbdf9)
+- [Protótipo no Figma](https://www.figma.com/file/QjHLXwSFeUtvLzZf0nko8I/Coffee-Delivery-%E2%80%A2-Desafio-React-Copy?fuid=819237858620419255)
