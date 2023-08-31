@@ -13,8 +13,8 @@ import { CartContext } from '@/contexts/CartContext'
 export function Navbar() {
   const { address } = useContext(CartContext)
   const userLocation =
-    address.city && address.uf
-      ? `${address.city}, ${address.uf}`
+    address.city && address.statecode
+      ? `${address.city}, ${address.statecode}`
       : undefined
 
   return (

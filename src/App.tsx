@@ -44,6 +44,11 @@ function App() {
   )
 
   const getCurrentCity = useCallback(() => {
+    const GEO_LOCATION_API_KEY = import.meta.env
+      .REACT_APP_IP_GEO_LOCATION_API_KEY
+
+    if (!GEO_LOCATION_API_KEY) return
+
     const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${
       import.meta.env.REACT_APP_IP_GEO_LOCATION_API_KEY
     }`
