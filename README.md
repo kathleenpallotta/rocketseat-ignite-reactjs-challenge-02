@@ -21,7 +21,7 @@ Apesar de serem poucas funcionalidades, foi preciso relembrar conceitos como:
 
 ## Para rodar o projeto
 
-- Copiar o arquivo `.env.example` preenchendo a variável `REACT_APP_IP_GEO_LOCATION_API_KEY` com uma chave gerada em [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
+- *(Opcional)* Criar um arquivo `.env` com base no arquivo `.env.example` (você pode substituir o valor da variável `REACT_APP_IP_GEO_LOCATION_API_KEY` por uma chave gerada em [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
 - Usar o comando `npm run dev`
 
 ## Links úteis
