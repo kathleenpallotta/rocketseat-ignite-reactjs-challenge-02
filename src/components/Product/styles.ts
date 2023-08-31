@@ -1,7 +1,50 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
+import { color, font, toRem } from '@/helpers/styles'
 
 // helpers
-import { color, font, toRem } from '@/helpers/styles'
+
+export const Card = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: ${toRem(24)} 0;
+  border-bottom: ${toRem(1)} solid ${color('base-button')};
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+`
+
+export const ProductDetails = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${toRem(20)};
+
+  img {
+    width: ${toRem(64)};
+    height: ${toRem(64)};
+  }
+
+  > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: ${color('base-subtitle')};
+    ${font('text-m')}
+    gap: ${toRem(4)};
+  }
+`
+
+export const Total = styled.span`
+  ${font('text-m')}
+  font-weight: bold;
+  color: ${color('base-text')};
+`
 
 export const Container = styled.div`
   border-radius: ${`${toRem(6)} ${toRem(36)}`};
@@ -77,4 +120,11 @@ export const Cart = styled.div`
   flex-direction: row;
   align-items: center;
   gap: ${toRem(8)};
+`
+
+export const LabelsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ${toRem(4)};
 `

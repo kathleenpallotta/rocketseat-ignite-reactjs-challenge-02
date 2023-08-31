@@ -18,6 +18,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin-top: ${navbarHeight}px;
-    background: ${defaultTheme.colors.background};
+    background: ${defaultTheme.colors['base-background']};
   }
 `

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { navbarHeight } from '@/styles/global'
 
 // helpers
-import { color, toRem } from '@/helpers/styles'
+import { color, font, toRem, containerWidth } from '@/helpers/styles'
 
 export const Container = styled.div`
   width: 100%;
@@ -19,8 +19,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.nav`
-  width: 100%;
-  max-width: ${toRem(1120)};
+  ${containerWidth()}
   margin: auto;
   display: flex;
   align-items: center;
@@ -28,5 +27,30 @@ export const Content = styled.nav`
 
   svg {
     width: ${toRem(85)};
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: ${toRem(12)};
+  }
+`
+
+export const LocationLabel = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${toRem(8)};
+  height: ${toRem(38)};
+  gap: ${toRem(4)};
+  border-radius: ${toRem(6)};
+  background-color: ${color('purple-light')};
+  color: ${color('purple-dark')};
+  ${font('text-s')}
+
+  svg {
+    width: ${toRem(22)};
+    height: ${toRem(22)};
+    color: ${color('purple')};
   }
 `

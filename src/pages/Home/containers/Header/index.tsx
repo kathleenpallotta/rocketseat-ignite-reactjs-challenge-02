@@ -13,10 +13,10 @@ import {
   Icon,
 } from './styles'
 
-import { ReactComponent as CartIcon } from '../../../../assets/icons/shopping-cart-fill.svg'
-import { ReactComponent as PackageIcon } from '../../../../assets/icons/package-fill.svg'
-import { ReactComponent as ClockIcon } from '../../../../assets/icons/timer-fill.svg'
-import { ReactComponent as CoffeeIcon } from '../../../../assets/icons/coffee-fill.svg'
+import { ReactComponent as CartIcon } from '@/assets/icons/shopping-cart-fill.svg'
+import { ReactComponent as PackageIcon } from '@/assets/icons/package-fill.svg'
+import { ReactComponent as ClockIcon } from '@/assets/icons/timer-fill.svg'
+import { ReactComponent as CoffeeIcon } from '@/assets/icons/coffee-fill.svg'
 
 // types
 import { Benefit } from './types'

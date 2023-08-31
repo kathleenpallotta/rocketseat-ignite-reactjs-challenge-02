@@ -38,6 +38,6 @@ export const defaultTheme = {
     // others
     tag: '700 0.625rem/130% Roboto, sans-serif',
     'button-g': '700 0.875rem/130% Roboto, sans-serif',
-    'button-m': '400 0.75rem/130% Roboto, sans-serif',
+    'button-s': '400 0.75rem/130% Roboto, sans-serif',
   },
 }

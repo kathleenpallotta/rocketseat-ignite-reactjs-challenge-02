@@ -1,8 +1,10 @@
 export interface ProductProps {
   title: string
-  description: string
-  labels: string[]
   value: number
   image: string
+  quantity: number
   id: number
+  shortVersion?: boolean
+  description?: string
+  labels?: string[]
 }

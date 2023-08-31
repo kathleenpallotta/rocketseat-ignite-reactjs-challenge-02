@@ -1,17 +1,19 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { ReactElement } from 'react'
 
-export type ButtonType = 'primary' | 'secondary' | 'addToCart'
+export type ButtonType = 'primary' | 'secondary' | 'addToCart' | 'submit'
 
 export interface ButtonProps {
   type: ButtonType
   label?: string
   icon?: ReactElement
-  action: Function
+  action?: Function
+  disabled?: boolean
 }
 
 export interface ButtonComponentProps {
-  type: ButtonType
+  buttonType: ButtonType
+  disabled?: boolean
 }
 
 export interface ButtonComponentColors {
@@ -29,5 +31,6 @@ export interface ButtonComponentColors {
 export interface ButtonSizing {
   [key: string]: {
     padding: string
+    iconSize?: number
   }
 }

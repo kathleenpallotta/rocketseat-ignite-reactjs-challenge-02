@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { ReactComponent as CartIcon } from '@/assets/icons/shopping-cart-fill.svg'
 
 // contexts
-import { CartContext } from '../../contexts/CartContext'
+import { CartContext } from '@/contexts/CartContext'
 
 // styles
 import { Container, Counter } from './styles'

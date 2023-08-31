@@ -1,14 +1,14 @@
 import styled, { RuleSet } from 'styled-components'
 
 // helpers
-import { color, font, toRem } from '../../helpers/styles'
+import { color, font, toRem } from '@/helpers/styles'
 
-// types
+// buttonTypes
 import {
   ButtonComponentColors,
   ButtonComponentProps,
   ButtonSizing,
-} from './types'
+} from './buttonTypes'
 
 const buttonColors: ButtonComponentColors = {
   primary: {
@@ -36,52 +36,65 @@ const buttonColors: ButtonComponentColors = {
 const buttonSizing: ButtonSizing = {
   primary: {
     padding: `${toRem(12)} ${toRem(8)}`,
+    iconSize: 16,
   },
   secondary: {
-    padding: toRem(8),
+    padding: `0 ${toRem(8)}`,
+    iconSize: 16,
   },
   addToCart: {
-    padding: toRem(8),
+    padding: '0',
+    iconSize: 22,
   },
 }
 
 export const Button = styled.button<ButtonComponentProps>`
   border: none;
-  padding: ${({ type }): RuleSet<object> => color(buttonSizing[type].padding)};
+  padding: ${({ buttonType }): string => buttonSizing[buttonType].padding};
+  min-width: ${toRem(32)};
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
   border-radius: ${toRem(6)};
   gap: ${toRem(6)};
 
-  background-color: ${({ type }): RuleSet<object> =>
-    color(buttonColors[type].background)};
-  color: ${({ type }): RuleSet<object> => color(buttonColors[type].label)};
+  background-color: ${({ buttonType }): RuleSet<object> =>
+    color(buttonColors[buttonType].background)};
+  color: ${({ buttonType }): RuleSet<object> =>
+    color(buttonColors[buttonType].label)};
   text-transform: uppercase;
   ${font('button-g')}
 
   svg {
-    width: ${toRem(22)};
+    width: ${({ buttonType }): string =>
+      toRem(buttonSizing[buttonType].iconSize)};
 
-    color: ${({ type }): RuleSet<object> => color(buttonColors[type].icon)};
+    color: ${({ buttonType }): RuleSet<object> =>
+      color(buttonColors[buttonType].icon)};
     path: {
-      fill: ${({ type }): RuleSet<object> => color(buttonColors[type].icon)};
+      fill: ${({ buttonType }): RuleSet<object> =>
+        color(buttonColors[buttonType].icon)};
     }
   }
 
   &:hover {
-    background-color: ${({ type }): RuleSet<object> =>
+    background-color: ${({ buttonType }): RuleSet<object> =>
       color(
-        buttonColors[type].backgroundHover || buttonColors[type].background,
+        buttonColors[buttonType].backgroundHover ||
+          buttonColors[buttonType].background,
       )};
-    color: ${({ type }): RuleSet<object> =>
-      color(buttonColors[type].labelHover || buttonColors[type].label)};
+    color: ${({ buttonType }): RuleSet<object> =>
+      color(
+        buttonColors[buttonType].labelHover || buttonColors[buttonType].label,
+      )};
 
     svg {
-      color: ${({ type }): RuleSet<object> =>
-        color(buttonColors[type].iconHover || buttonColors[type].icon)};
+      color: ${({ buttonType }): RuleSet<object> =>
+        color(
+          buttonColors[buttonType].iconHover || buttonColors[buttonType].icon,
+        )};
     }
   }
 `

@@ -31,4 +31,5 @@ export const Counter = styled.span`
   top: ${toRem(-8)};
   right: ${toRem(-8)};
   ${font('text-s')}
+  line-height: 0;
 `

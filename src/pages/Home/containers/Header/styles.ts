@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Background from '@/assets/images/background.png'
 
 // helpers
-import { color, font, toRem } from '@/helpers/styles'
+import { color, containerWidth, font, toRem } from '@/helpers/styles'
 
 // types
 import { IconProps } from './types'
@@ -14,7 +14,6 @@ const smallScreenBreakpoint = '1025px'
 export const Container = styled.header`
   width: 100%;
   background-image: url(${Background});
-  background-color: ${color('base-background')};
   background-size: cover;
   background-position: top;
   padding: ${toRem(92)} 0;
@@ -25,8 +24,7 @@ export const Container = styled.header`
 `
 
 export const Content = styled.div`
-  width: 100%;
-  max-width: ${toRem(1120)};
+  ${containerWidth()}
   margin: auto;
   display: flex;
   flex-direction: row;
