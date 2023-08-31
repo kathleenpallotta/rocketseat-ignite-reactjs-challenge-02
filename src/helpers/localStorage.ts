@@ -27,13 +27,13 @@ export const setPaymentMethodToLocalStorage = (paymentMethod: string) => {
 export const getAddressFromLocalStorage = () => {
   if (!localStorage.getItem('coffee_delivery:address')) {
     return {
-      neighborhood: undefined,
-      zipcode: undefined,
-      city: undefined,
-      number: undefined,
-      street: undefined,
-      statecode: undefined,
-      complement: undefined,
+      neighborhood: null,
+      zipcode: null,
+      city: null,
+      number: null,
+      street: null,
+      statecode: null,
+      complement: null,
     }
   }
 
