@@ -1,4 +1,4 @@
-# Desafio: Coffee Delivery [WIP]
+# Desafio: Coffee Delivery
 
 Desenvolvimento de uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
 
@@ -18,3 +18,8 @@ Apesar de serem poucas funcionalidades, foi preciso relembrar conceitos como:
 - Listas e chaves no ReactJS
 - Propriedades
 - Componentização
+
+## Para rodar esse projeto
+
+- Copiar o arquivo `.env.example` preenchendo a variável `REACT_APP_IP_GEO_LOCATION_API_KEY` com uma chave gerada em [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
+- Usar o comando `npm run dev`
